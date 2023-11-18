@@ -2,33 +2,22 @@ import React from "react";
 
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import ThemeController from "./theme_controller";
 type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <nav className=" glass sticky top-5  z-50 m-5 flex  w-[90vw] flex-row items-center justify-end space-x-4 border border-black px-10 rounded-full">
-      <Link
-        href="#"
-        className="link-hover link p-4 text-xl hover:text-primary"
-      >
+    <nav className=" glass sticky top-5  z-50 m-5 flex  w-[90vw] flex-row items-center justify-end space-x-4 rounded-full border border-black px-10">
+      <Link href="#" className="link-hover link p-4 text-xl hover:text-primary">
         Heritier
       </Link>
-      <Link
-        href="#"
-        className="link-hover link p-4 text-xl hover:text-primary"
-      >
+      <Link href="#" className="link-hover link p-4 text-xl hover:text-primary">
         Blog
       </Link>
-      <Link
-        href="#"
-        className="link-hover link p-4 text-xl hover:text-primary"
-      >
+      <Link href="#" className="link-hover link p-4 text-xl hover:text-primary">
         Works
       </Link>
-      <Link
-        href="#"
-        className="link-hover link p-4 text-xl hover:text-primary"
-      >
+      <Link href="#" className="link-hover link p-4 text-xl hover:text-primary">
         Contact
       </Link>
       <Link
@@ -38,6 +27,9 @@ const Navbar = (props: Props) => {
       >
         <FaGithub />
       </Link>
+      <div className="flex items-center justify-center text-sm">
+        <ThemeController />
+      </div>
     </nav>
   );
 };

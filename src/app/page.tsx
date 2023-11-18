@@ -2,11 +2,12 @@ import Image from "next/image";
 import profile from "../assets/Profile.png";
 import splatter from "../assets/Splatter.png";
 import splatter_svg from "../assets/Splatter.svg";
-import Navbar from "~/components/Navbar";
+import Navbar from "~/components/navbar";
+import RandomQuote from "~/components/what_I_mean";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center relative">
+    <main className="relative flex flex-col items-center">
       <Image
         src={splatter_svg}
         height={500}
@@ -17,7 +18,10 @@ export default function HomePage() {
       <Navbar />
       <div className="hero min-h-screen max-w-[90vw] items-start  pt-5">
         <div className="-red-500 hero-content  flex-col lg:flex-row-reverse lg:items-center">
-          <Image src={profile} height={500} width={500} alt="profile" />
+          <div className="flex flex-col items-center justify-center">
+            <Image src={profile} height={500} width={500} alt="profile" />
+            <RandomQuote />
+          </div>
           <div className=" -green-500">
             <h1 className="text-7xl font-bold capitalize">Heritier Kaumbu</h1>
             <h2 className="text-3xl font-bold capitalize text-secondary">

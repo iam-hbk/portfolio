@@ -8,6 +8,10 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      backgroundImage: (theme) => ({
+        "text-gradient":
+          "linear-gradient(to right,#3449C1,#5671D6, #E08700, #E97220)",
+      }),
     },
   },
   plugins: [require("daisyui")],
@@ -17,7 +21,7 @@ export default {
         light: {
           primary: "#3449C1",
           secondary: "#E08700",
-          accent: "#FF9900",
+          accent: "#E97220",
           neutral: "#1d1d1d",
           "base-100": "#f3f3f3",
           info: "#00d8f4",
@@ -28,7 +32,7 @@ export default {
         dark: {
           primary: "#5671D6", // A slightly lighter shade of the original primary for better visibility
           secondary: "#F0A732", // A brighter shade of the original secondary
-          accent: "#FFB84D", // A lighter shade of the original accent
+          accent: "#E97220", // A lighter shade of the original accent
           neutral: "#e2e2e2", // A light gray for text and other elements
           "base-100": "#2a2a2a", // A dark gray for the background
           info: "#31E6FC", // A brighter shade of the original info color

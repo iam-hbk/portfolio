@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FaArrowDown } from "react-icons/fa";
 
 const ScrollDownArrow: React.FC = () => {

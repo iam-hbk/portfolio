@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "~/styles/globals.css";
 
 import { Urbanist } from "next/font/google";

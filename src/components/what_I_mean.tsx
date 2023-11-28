@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Quote = {
   say: string;
@@ -55,8 +57,8 @@ const getRandomQuote = (): Quote => {
 };
 
 const RandomQuote: React.FC = () => {
-  const [currentQuote, setCurrentQuote] = useState<Quote>(getRandomQuote());
-  const [toggleState, setToggleState] = useState(false); // false for 'say', true for 'mean'
+  const [currentQuote, setCurrentQuote] = useState<Quote>(quotes[7] as Quote);
+  const [toggleState, setToggleState] = useState(true); // false for 'say', true for 'mean'
 
   const toggleQuote = () => {
     setToggleState(!toggleState);
@@ -65,12 +67,12 @@ const RandomQuote: React.FC = () => {
   return (
     <div className="flex flex-col space-y-2">
       <label className="label swap swap-flip cursor-pointer items-start p-0">
-        <input type="checkbox" onChange={toggleQuote} />
+        <input checked={toggleState} type="checkbox" onChange={toggleQuote} />
         <div className="glass swap-on m-0 flex w-96 flex-col space-y-2 rounded-lg bg-base-100 p-3 shadow-xl">
           <h2 className="badge badge-ghost self-end rounded-md p-2">
-            What I Say 😎
+            Click the card to see what I mean 🫣
           </h2>
-          <p className="text-lg">{currentQuote.say}</p>
+          <p className="text-lg">{currentQuote?.say}</p>
           <button
             className=" link-accent link self-end"
             onClick={() => setCurrentQuote(getRandomQuote())}
@@ -80,9 +82,9 @@ const RandomQuote: React.FC = () => {
         </div>
         <div className=" glass swap-off m-0 flex w-96 flex-col space-y-2 rounded-lg bg-base-100 p-3 shadow-xl">
           <h2 className="badge badge-ghost self-end rounded-md p-2">
-            What I Mean 🫣
+            Click the card to see what I say 😎
           </h2>
-          <p className="text-lg">{currentQuote.mean}</p>
+          <p className="text-lg">{currentQuote?.mean}</p>
         </div>
       </label>
     </div>

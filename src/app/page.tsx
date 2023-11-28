@@ -5,8 +5,8 @@ import profile from "@/assets/Profile.png";
 import splatter from "@/assets/Splatter.png";
 import splatter_svg from "@/assets/Splatter.svg";
 import Navbar from "@/components/navbar";
-import ScrollDownArrow from "@/components/arrow_down_more_about_me";
 import RandomQuote from "@/components/what_I_mean";
+import ScrollDownArrow from "@/components/arrow_down_more_about_me";
 export default function HomePage() {
   return (
     <main className="relative flex flex-col items-center">

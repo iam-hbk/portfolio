@@ -1,8 +1,6 @@
 /* eslint-disable */
-
 import Image from "next/image";
 import profile from "@/assets/Profile.png";
-import splatter from "@/assets/Splatter.png";
 import splatter_svg from "@/assets/Splatter.svg";
 import Navbar from "@/components/navbar";
 import RandomQuote from "@/components/what_I_mean";

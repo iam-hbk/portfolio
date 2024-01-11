@@ -2,7 +2,7 @@
 import Image from "next/image";
 import profile from "@/assets/Profile.png";
 import splatter_svg from "@/assets/Splatter.svg";
-import Navbar from "@/components/navbar";
+import Navbar from "../components/navbar";
 import RandomQuote from "@/components/what_I_mean";
 import ScrollDownArrow from "@/components/arrow_down_more_about_me";
 export default function HomePage() {
